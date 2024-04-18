@@ -293,6 +293,7 @@ body {
     width: 95%;
     min-height: 70px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 5px;
     padding: 0 20px;
@@ -340,7 +341,7 @@ body {
     pointer-events: none;
 }
 
-.event::after{
+.events .event::after{
     content: "√";
     position: absolute;
     top: 50%;
@@ -354,8 +355,19 @@ body {
     transform: translateY(-50%);
 }
 
-.event:hover::after{
+.events .event:hover::after{
     display: flex;
+}
+
+.events .no-event{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #b7b7b7;
 }
 
 .add-event-wrapper{
