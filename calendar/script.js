@@ -32,7 +32,7 @@ const months = [
 ];
 
 //Eventos defaults
-const eventsArr = [
+/*const eventsArr = [
     {
         day: 18,
         month: 4,
@@ -63,8 +63,13 @@ const eventsArr = [
             },
         ],
     }
-];
+];*/
 
+//define um array vazio
+let eventsArr = [];
+
+//e em seguida chama o get
+getEvents();
 
 
 //funçção para adicionar dias
@@ -386,6 +391,8 @@ function updateEvents(date){
     }
 
     eventsContainer.innerHTML = events;
+    //salvar um evento quando update event for chamado
+    saveEvents();
 }
 
 
@@ -511,3 +518,15 @@ eventsContainer.addEventListener("click", (e) => {
         updateEvents(activeDay);
     }
 })
+
+//armazenar eventos em um histórico local
+function saveEvents(){
+    localStorage.setItem("events", JSON.stringify(eventsArr));
+}
+
+function getEvents(){
+    if(localStorage.getItem("events") === null){
+        return;
+    }
+    eventsArr.push(...JSON.parse(localStorage.getItem("events")));
+}
