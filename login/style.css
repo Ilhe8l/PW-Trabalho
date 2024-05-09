@@ -177,9 +177,9 @@ a{
     z-index: 6;
 }
 
-/*.left-panel{
+.left-panel{
     pointer-events: none;
-}*/
+}
 
 .content{
     color: #fff;
@@ -217,6 +217,31 @@ a{
     display: none;
 }
 
+.sign-up-inst{
+    display: none;
+}
+
+.goto-p{
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+}
+
+.goto-btn{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    background: #df4adf;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.goto-btn:hover{
+    background: #c03cc0;
+}
+
+
 /*Animação*/
 
 .container.sign-up-mode::before{
@@ -241,11 +266,11 @@ a{
     opacity: 1;
 }
 
-.container .sign-up-mode .right-panel{
+.container.sign-up-mode .right-panel{
     pointer-events: none;
 }
 
-.container .sign-up-mode .left-panel{
+.container.sign-up-mode .left-panel{
     pointer-events: all;
 }
 
