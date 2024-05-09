@@ -6,8 +6,88 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+
+/*CSS Navbar*/
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+.fas-nav{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+a:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+}
+
+/*CSS Calendário*/
 
 body {
     position: relative;
@@ -15,7 +95,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 30px;
+    padding: 0 30px 30px 120px;
     background-color: #e2e1dc;
 }
 
@@ -510,6 +590,7 @@ body {
 
 @media screen and (max-width: 1000px) {
     body {
+      padding: 0 20px 30px 110px; /*navbar*/
       align-items: flex-start;
       justify-content: flex-start;
     }
@@ -549,6 +630,46 @@ body {
     }
   }
   @media screen and (max-width: 500px) {
+    /*Navbar*/
+    body{
+        padding: 0px 0px 0px 50px;
+    }
+
+    .logo{
+        align-items: center;
+        margin: 0;
+    }
+
+    .logo span{
+        font-size: 15px;
+        height: 40px;
+        margin: -20px 0 0 0;
+        padding: 0 0 0 10px;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    a{
+        width: 150px;
+        height: 70px;
+    }
+
+    nav{
+        width: 50px;
+    }
+    nav:hover{
+        width: 150px;
+    }
+
+    .fas-nav{
+        width: 30px;
+        height: 20px;
+    }
+
+    /*Calendário*/
     .calendar .month {
       height: 75px;
     }
