@@ -227,18 +227,16 @@ a{
 }
 
 .goto-btn{
-    padding: 10px 15px;
+    background-color: transparent;
     border: none;
-    border-radius: 50px;
-    background: #df4adf;
-    color: #fff;
+    color: #c03cc0;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 .goto-btn:hover{
-    background: #c03cc0;
+    color: #520852;
 }
 
 
@@ -304,7 +302,13 @@ a{
     }
     .account-text{
         display: initial;
-        margin-top: 30px;
+        margin-top: 0px;
+        text-align: center;
+        
+    }
+    .account-text.login{
+        margin-top: 15px;
+
     }
 }
 
